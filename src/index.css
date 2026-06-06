@@ -1,0 +1,142 @@
+@import '@fontsource/syne/400.css';
+@import '@fontsource/syne/500.css';
+@import '@fontsource/syne/600.css';
+@import '@fontsource/syne/700.css';
+@import '@fontsource/syne/800.css';
+@import '@fontsource/space-grotesk/300.css';
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/600.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-cyan: #00f5ff;
+  --neon-violet: #bf5fff;
+  --neon-lime: #c6f135;
+  --neon-pink: #ff2d78;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #ffffff;
+  color: #0a0a0a;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--neon-cyan); border-radius: 3px; }
+
+/* ── Noise grain overlay ── */
+.noise-overlay::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.45;
+  mix-blend-mode: overlay;
+}
+
+/* ── Grid bg ── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,245,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,245,255,0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+.grid-bg-light {
+  background-image:
+    linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* ── Gradient text ── */
+.grad-cyan { background: linear-gradient(135deg,#00f5ff,#bf5fff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-lime { background: linear-gradient(135deg,#c6f135,#00f5ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-violet { background: linear-gradient(135deg,#bf5fff,#ff2d78); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+/* ── Marquee ── */
+.marquee-wrap { overflow: hidden; }
+.marquee-inner { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+.marquee-inner:hover { animation-play-state: paused; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ── Video shimmer overlay ── */
+.video-shimmer {
+  background: linear-gradient(135deg, rgba(0,245,255,0.08) 0%, rgba(191,95,255,0.06) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* ── Kerna-style section number ── */
+.section-number {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(80px, 14vw, 180px);
+  line-height: 1;
+  background: linear-gradient(180deg, rgba(0,245,255,0.12) 0%, transparent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  user-select: none;
+  pointer-events: none;
+}
+.dark .section-number {
+  background: linear-gradient(180deg, rgba(0,245,255,0.1) 0%, transparent 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ── Horizontal scroll tags ── */
+.scroll-x { overflow-x: auto; scrollbar-width: none; }
+.scroll-x::-webkit-scrollbar { display: none; }
+
+/* ── Orbiting ring ── */
+@keyframes orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes orbit-reverse { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+@keyframes counter-rotate { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+@keyframes counter-rotate-rev { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* ── Underline reveal ── */
+.underline-reveal {
+  display: inline;
+  background-image: linear-gradient(90deg, var(--neon-cyan), var(--neon-violet));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  transition: background-size 0.6s ease;
+}
+.underline-reveal:hover, .group:hover .underline-reveal { background-size: 100% 2px; }
+
+/* ── Tag pill ── */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* ── Border glow ── */
+.border-glow-cyan { box-shadow: 0 0 0 1px rgba(0,245,255,0.2), 0 0 30px rgba(0,245,255,0.08); }
+.border-glow-violet { box-shadow: 0 0 0 1px rgba(191,95,255,0.2), 0 0 30px rgba(191,95,255,0.08); }
+
+/* ── Kerna value card line ── */
+.value-line::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,245,255,0.3), transparent);
+}

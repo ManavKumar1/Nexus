@@ -1,6 +1,5 @@
 import { ThemeProvider } from './hooks/useTheme'
 import { TransitionProvider } from './components/PageTransition'
-
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TechMarquee from './components/TechMarquee'

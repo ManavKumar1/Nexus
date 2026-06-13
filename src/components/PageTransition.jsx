@@ -15,7 +15,7 @@ import { createContext, useContext, useState } from 'react'
 const TransitionCtx = createContext({ trigger: () => {} })
 export const useTransition = () => useContext(TransitionCtx)
 
-const COLS = 8   // number of square columns
+const COLS = 100   // number of square columns
 const ROWS = 5   // number of square rows
 
 export function TransitionProvider({ children }) {
@@ -77,8 +77,10 @@ function SquareCurtain({ direction, onComplete }) {
 
         // Stagger by column (left→right for enter, right→left for exit)
         const staggerCol = direction === 'in' ? col : (COLS - 1 - col)
-        const colDelay = staggerCol * 0.035
-        const rowDelay = row * 0.012
+        // const colDelay = staggerCol * 0.035
+        const colDelay = staggerCol * 0.0001
+        // const rowDelay = row * 0.012
+        const rowDelay = row * 0.0001
         const delay = colDelay + rowDelay
 
         const isLast = direction === 'in'
@@ -94,7 +96,8 @@ function SquareCurtain({ direction, onComplete }) {
             transition={{
               duration: 0.28,
               delay,
-              ease: [0.76, 0, 0.24, 1],
+              // ease: [0.76, 0, 0.24, 1],
+              ease: [0.1, 0, 0.1, 1],
             }}
             onAnimationComplete={isLast ? onComplete : undefined}
             className="dark:bg-[#100C0A] bg-[#16110D]"

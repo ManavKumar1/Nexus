@@ -132,10 +132,10 @@ function GridBackground() {
                 width: CELL_SIZE, height: CELL_SIZE,
                 border: '0.5px solid',
                 borderColor: b > 0.05
-                  ? `rgba(255,92,26,${0.08 + b * 0.5})`
-                  : 'rgba(255,92,26,0.04)',
+                  ? `rgba(0,245,255,${0.08 + b * 0.5})`
+                  : 'rgba(0,245,255,0.04)',
                 background: b > 0.1
-                  ? `rgba(255,92,26,${b * 0.07})`
+                  ? `rgba(0,245,255,${b * 0.07})`
                   : 'transparent',
                 // No CSS transition — we handle timing ourselves via RAF
               }} />
@@ -147,14 +147,14 @@ function GridBackground() {
       {/* Ambient orbs */}
       <motion.div animate={{ x:[0,70,-40,0], y:[0,-55,35,0] }} transition={{ duration:20, repeat:Infinity, ease:'easeInOut' }}
         className="absolute top-[18%] left-[12%] w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{ background:'radial-gradient(circle,rgba(255,92,26,0.08) 0%,transparent 65%)', filter:'blur(70px)' }} />
+        style={{ background:'radial-gradient(circle,rgba(0,245,255,0.08) 0%,transparent 65%)', filter:'blur(70px)' }} />
       <motion.div animate={{ x:[0,-55,75,0], y:[0,45,-35,0] }} transition={{ duration:26, repeat:Infinity, ease:'easeInOut', delay:4 }}
         className="absolute bottom-[5%] right-[8%] w-[600px] h-[600px] rounded-full pointer-events-none"
-        style={{ background:'radial-gradient(circle,rgba(255,176,32,0.06) 0%,transparent 65%)', filter:'blur(90px)' }} />
+        style={{ background:'radial-gradient(circle,rgba(191,95,255,0.06) 0%,transparent 65%)', filter:'blur(90px)' }} />
 
       {/* Vignette */}
       <div className="absolute inset-0 dark:block hidden pointer-events-none"
-        style={{ background:'radial-gradient(ellipse at center,transparent 20%,rgba(10,8,7,0.95) 100%)' }} />
+        style={{ background:'radial-gradient(ellipse at center,transparent 20%,rgba(5,5,8,0.95) 100%)' }} />
       <div className="absolute inset-0 dark:hidden block pointer-events-none"
         style={{ background:'radial-gradient(ellipse at center,transparent 25%,rgba(255,255,255,0.93) 100%)' }} />
     </div>
@@ -171,7 +171,7 @@ export default function Hero() {
   const fadeUp  = { hidden:{ opacity:0, y:36 }, show:{ opacity:1, y:0, transition:{ duration:0.75, ease:[0.16,1,0.3,1] } } }
 
   return (
-    <section ref={ref} className="relative min-h-[100svh] overflow-hidden dark:bg-[#0A0807] bg-white flex flex-col">
+    <section ref={ref} className="relative min-h-[100svh] overflow-hidden dark:bg-[#050508] bg-white flex flex-col">
       <GridBackground />
       <motion.div style={{ y:textY, opacity }}
         className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-28 pb-24 max-w-7xl mx-auto w-full">
@@ -179,8 +179,8 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="flex justify-center mb-9">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full dark:bg-white/[0.045] bg-black/[0.04] border dark:border-white/8 border-black/8 backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5C1A] opacity-60"/>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF5C1A]"/>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f5ff] opacity-60"/>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00f5ff]"/>
               </span>
               <span className="font-grotesk text-[11px] dark:text-white/55 text-black/55 tracking-[0.18em] uppercase">Available — 2 spots open</span>
               <span className="dark:text-white/15 text-black/20 text-xs">·</span>
@@ -199,19 +199,19 @@ export default function Hero() {
               <svg className="absolute -bottom-1 left-0 w-full" height="5" viewBox="0 0 200 5" preserveAspectRatio="none">
                 <motion.path d="M0 3 Q50 0.5 100 3 Q150 5.5 200 3" stroke="url(#heroUL)" strokeWidth="3" fill="none" strokeLinecap="round"
                   initial={{pathLength:0}} animate={{pathLength:1}} transition={{delay:1.4,duration:0.9,ease:'easeOut'}}/>
-                <defs><linearGradient id="heroUL" x1="0" x2="1"><stop stopColor="#FF5C1A"/><stop offset="1" stopColor="#FFB020"/></linearGradient></defs>
+                <defs><linearGradient id="heroUL" x1="0" x2="1"><stop stopColor="#00f5ff"/><stop offset="1" stopColor="#bf5fff"/></linearGradient></defs>
               </svg>
             </em>{' '}ship.
           </motion.h1>
           <motion.p variants={fadeUp}
-            className="font-grotesk dark:text-white/65 text-black/52 max-w-[520px] mx-auto leading-[1.75] mb-10"
+            className="font-grotesk dark:text-white/48 text-black/52 max-w-[520px] mx-auto leading-[1.75] mb-10"
             style={{ fontSize:'clamp(0.95rem,1.5vw,1.15rem)' }}>
             We don't work <em>for</em> your team — we become part of it.
             Then we ship, refine, and evolve your product from the inside out.
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12">
-            <motion.a href="#booking" whileHover={{ scale:1.04, boxShadow:'0 0 50px rgba(255,92,26,0.28)' }} whileTap={{ scale:0.97 }}
-              className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full text-sm font-grotesk font-600 text-black bg-[#FF5C1A] transition-all duration-200">
+            <motion.a href="#booking" whileHover={{ scale:1.04, boxShadow:'0 0 50px rgba(0,245,255,0.28)' }} whileTap={{ scale:0.97 }}
+              className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full text-sm font-grotesk font-600 text-black bg-[#00f5ff] transition-all duration-200">
               Book a Call <ArrowRight size={15}/>
             </motion.a>
             <motion.a href="#work" whileHover={{ scale:1.02 }} whileTap={{ scale:0.97 }}
@@ -234,10 +234,10 @@ export default function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
         <span className="font-grotesk text-[9px] tracking-[0.3em] uppercase dark:text-white/22 text-black/28">Scroll</span>
         <motion.div animate={{y:[0,8,0]}} transition={{duration:1.6,repeat:Infinity,ease:'easeInOut'}}>
-          <div className="w-px h-8 bg-gradient-to-b from-[#FF5C1A] to-transparent"/>
+          <div className="w-px h-8 bg-gradient-to-b from-[#00f5ff] to-transparent"/>
         </motion.div>
       </motion.div>
-      <div className="absolute bottom-0 left-0 right-0 h-48 z-[2] dark:bg-gradient-to-t dark:from-[#0A0807] bg-gradient-to-t from-white to-transparent pointer-events-none"/>
+      <div className="absolute bottom-0 left-0 right-0 h-48 z-[2] dark:bg-gradient-to-t dark:from-[#050508] bg-gradient-to-t from-white to-transparent pointer-events-none"/>
     </section>
   )
 }

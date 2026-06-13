@@ -97,7 +97,7 @@ function SquareCurtain({ direction, onComplete }) {
               ease: [0.76, 0, 0.24, 1],
             }}
             onAnimationComplete={isLast ? onComplete : undefined}
-            className="dark:bg-[#100C0A] bg-[#16110D]"
+            className="dark:bg-[#0a0a0f] bg-[#111116]"
           />
         )
       })}

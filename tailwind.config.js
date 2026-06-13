@@ -22,10 +22,10 @@ export default {
           900: '#312e81',
         },
         neon: {
-          cyan:   '#00f5ff',
-          violet: '#bf5fff',
-          lime:   '#c6f135',
-          pink:   '#ff2d78',
+          cyan:   '#FF5C1A',
+          violet: '#FFB020',
+          lime:   '#FF4D6A',
+          pink:   '#FFD23F',
         },
       },
       animation: {

@@ -14,7 +14,7 @@ const pillars = [
     short: 'Positioning and architecture that opens doors.',
     body: 'We embed early — product vision sessions, architecture audits, competitor teardowns. We map where you are, where you need to be, and the fastest path between the two. No slide decks. Real strategic clarity.',
     tags: ['Product Vision','Tech Audit','Roadmapping','Competitive Analysis'],
-    accent: '#FF5C1A',
+    accent: '#00f5ff',
   },
   {
     num: '2',
@@ -22,7 +22,7 @@ const pillars = [
     short: 'Interfaces that win before you say a word.',
     body: 'Component systems, motion languages, brand tokens, and UI that feels inevitable. Design isn\'t decoration — it\'s the first argument your product makes. We make sure that argument wins.',
     tags: ['UI/UX','Design System','Motion','Brand Identity'],
-    accent: '#FFB020',
+    accent: '#bf5fff',
   },
   {
     num: '3',
@@ -30,7 +30,7 @@ const pillars = [
     short: 'Production code. Weekly. Every sprint.',
     body: 'Full-stack engineering across web, mobile, and SaaS. React, Next.js, React Native, Node, Python — whatever the problem requires. We ship real, working software on a weekly cadence with live preview links.',
     tags: ['React','Next.js','React Native','Node.js','Python'],
-    accent: '#FF4D6A',
+    accent: '#c6f135',
   },
   {
     num: '4',
@@ -38,7 +38,7 @@ const pillars = [
     short: 'Ongoing partnership that compounds over time.',
     body: 'The longer we\'re in, the sharper we get. Every cycle, we understand your product deeper, move faster, and raise the bar on what we ship. Monthly retainers with no lock-in — we earn your trust every sprint.',
     tags: ['Retainer','CI/CD','Performance','Growth'],
-    accent: '#FFD23F',
+    accent: '#ff2d78',
   },
 ]
 
@@ -125,7 +125,7 @@ export default function BrandSystem() {
   const y    = useSpring(rawY,{stiffness:40,damping:16})
 
   return (
-    <section ref={ref} id="services" className="relative dark:bg-[#0C0A08] bg-stone-50/60 overflow-hidden">
+    <section ref={ref} id="services" className="relative dark:bg-[#07070c] bg-gray-50/60 overflow-hidden">
 
       {/* Big background text — parallax */}
       <motion.div style={{y}}
@@ -143,7 +143,7 @@ export default function BrandSystem() {
           <div>
             <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.6}}>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-5 h-px bg-[#FFB020]"/>
+                <span className="w-5 h-px bg-[#bf5fff]"/>
                 <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">
                   How we operate
                 </span>
@@ -177,9 +177,9 @@ export default function BrandSystem() {
             <p className="font-grotesk text-sm dark:text-white/45 text-black/50">No pitch decks. No fluff. A real conversation about your product.</p>
           </div>
           <motion.a href="#booking"
-            whileHover={{scale:1.03,boxShadow:'0 0 40px rgba(255,92,26,0.25)'}}
+            whileHover={{scale:1.03,boxShadow:'0 0 40px rgba(0,245,255,0.25)'}}
             whileTap={{scale:0.97}}
-            className="flex-shrink-0 px-7 py-3.5 rounded-full bg-[#FF5C1A] text-black font-grotesk font-600 text-sm transition-all duration-200">
+            className="flex-shrink-0 px-7 py-3.5 rounded-full bg-[#00f5ff] text-black font-grotesk font-600 text-sm transition-all duration-200">
             Book Discovery Call →
           </motion.a>
         </motion.div>

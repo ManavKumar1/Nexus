@@ -15,7 +15,7 @@ export default function Process() {
   const y    = useSpring(rawY,{stiffness:40,damping:16})
 
   return (
-    <section ref={ref} id="process" className="relative dark:bg-[#0C0A08] bg-stone-50/60 overflow-hidden py-28">
+    <section ref={ref} id="process" className="relative dark:bg-[#07070c] bg-gray-50/60 overflow-hidden py-28">
 
       {/* Bg number */}
       <motion.div style={{y}}
@@ -27,7 +27,7 @@ export default function Process() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}>
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-5 h-px bg-[#FFB020]"/>
+            <span className="w-5 h-px bg-[#bf5fff]"/>
             <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">How We Work</span>
           </div>
           <h2 className="font-syne font-800 dark:text-white text-black leading-[0.93] tracking-[-0.02em] mb-20"
@@ -61,8 +61,8 @@ export default function Process() {
             <p className="font-syne font-700 text-xl dark:text-white text-black mb-1">Ready to start building?</p>
             <p className="font-grotesk text-sm dark:text-white/42 text-black/50">No pitch decks. No fluff. Just a real conversation about your product.</p>
           </div>
-          <motion.a href="#booking" whileHover={{scale:1.03,boxShadow:'0 0 36px rgba(255,92,26,0.22)'}} whileTap={{scale:0.97}}
-            className="flex-shrink-0 px-7 py-3.5 rounded-full bg-[#FF5C1A] text-black font-grotesk font-600 text-sm">
+          <motion.a href="#booking" whileHover={{scale:1.03,boxShadow:'0 0 36px rgba(0,245,255,0.22)'}} whileTap={{scale:0.97}}
+            className="flex-shrink-0 px-7 py-3.5 rounded-full bg-[#00f5ff] text-black font-grotesk font-600 text-sm">
             Book Discovery Call →
           </motion.a>
         </motion.div>

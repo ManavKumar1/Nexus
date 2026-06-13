@@ -12,7 +12,7 @@ const projects = [
     cat: 'SaaS · Web App',
     desc: 'Real-time portfolio tracker with AI insights, live charts, and Stripe billing. Shipped in 6 weeks.',
     tags: ['Next.js', 'PostgreSQL', 'OpenAI'],
-    accent: '#FF5C1A',
+    accent: '#00f5ff',
     col: 'lg:col-span-2',
     // finance / dark dashboard screenshot feel
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80&fit=crop',
@@ -24,7 +24,7 @@ const projects = [
     cat: 'iOS & Android',
     desc: 'Offline-first task app with team collaboration and real-time sync.',
     tags: ['React Native', 'Supabase'],
-    accent: '#FFB020',
+    accent: '#bf5fff',
     col: '',
     // mobile app UI feel
     img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&fit=crop',
@@ -36,7 +36,7 @@ const projects = [
     cat: 'AI Platform',
     desc: 'LLM-powered trade signals using RAG pipelines and vector search.',
     tags: ['Python', 'LangChain'],
-    accent: '#FF4D6A',
+    accent: '#c6f135',
     col: '',
     // data / AI / code feel
     img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&fit=crop',
@@ -48,7 +48,7 @@ const projects = [
     cat: 'Branding · Design System',
     desc: 'Full identity system — logo, motion tokens, 200+ component library.',
     tags: ['Figma', 'Motion'],
-    accent: '#FFD23F',
+    accent: '#ff2d78',
     col: 'lg:col-span-2',
     // branding / design feel
     img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1400&q=80&fit=crop',
@@ -79,7 +79,7 @@ function ProjectCard({ p, i }) {
       <div className="relative overflow-hidden" style={{ aspectRatio: isWide ? '21/8' : '4/3' }}>
 
         {/* Skeleton shimmer while loading */}
-        <div className={`absolute inset-0 dark:bg-[#120E0B] bg-stone-100 transition-opacity duration-500 ${imgLoaded ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`absolute inset-0 dark:bg-[#0d0d1a] bg-gray-100 transition-opacity duration-500 ${imgLoaded ? 'opacity-0' : 'opacity-100'}`}>
           <motion.div
             animate={{ x: ['-100%', '100%'] }}
             transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
@@ -98,7 +98,7 @@ function ProjectCard({ p, i }) {
         </motion.div>
 
         {/* Dark overlay gradient — stronger at bottom for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t dark:from-[#0A0807]/90 from-white/90 dark:via-[#0A0807]/20 via-white/10 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t dark:from-[#050508]/90 from-white/90 dark:via-[#050508]/20 via-white/10 to-transparent pointer-events-none" />
 
         {/* Accent colour tint on hover */}
         <div
@@ -154,7 +154,7 @@ function ProjectCard({ p, i }) {
 
 export default function Work() {
   return (
-    <section id="work" className="py-28 dark:bg-[#0A0807] bg-white">
+    <section id="work" className="py-28 dark:bg-[#050508] bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -162,7 +162,7 @@ export default function Work() {
           <div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className="flex items-center gap-3 mb-5">
-                <span className="w-5 h-px bg-[#FF4D6A]" />
+                <span className="w-5 h-px bg-[#c6f135]" />
                 <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">Selected Work</span>
               </div>
               <h2

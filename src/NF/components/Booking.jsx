@@ -42,7 +42,7 @@ export default function Booking() {
       name:'Nexus Agency', description:'Discovery Call — ₹999 deposit (refundable)',
       handler: () => { setLoading(false); setStep(3) },
       prefill:{ name:form.name, email:form.email },
-      theme:{ color:'#FF5C1A' },
+      theme:{ color:'#00f5ff' },
       modal:{ ondismiss:() => setLoading(false) },
     })
     setLoading(false)
@@ -50,15 +50,15 @@ export default function Booking() {
   }
 
   if (step === 3) return (
-    <section id="booking" className="py-28 dark:bg-[#0A0807] bg-white">
+    <section id="booking" className="py-28 dark:bg-[#050508] bg-white">
       <div className="max-w-lg mx-auto px-6 text-center">
         <motion.div initial={{scale:0.85,opacity:0}} animate={{scale:1,opacity:1}} transition={{duration:0.5,ease:[0.16,1,0.3,1]}}>
-          <div className="w-16 h-16 rounded-full bg-[#FF5C1A]/12 border border-[#FF5C1A]/25 flex items-center justify-center mx-auto mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5C1A" strokeWidth="2" strokeLinecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <div className="w-16 h-16 rounded-full bg-[#00f5ff]/12 border border-[#00f5ff]/25 flex items-center justify-center mx-auto mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f5ff" strokeWidth="2" strokeLinecap="round"><path d="M20 6L9 17l-5-5"/></svg>
           </div>
           <h2 className="font-syne font-800 text-3xl dark:text-white text-black mb-3">You're booked.</h2>
           <p className="font-grotesk text-sm dark:text-white/52 text-black/58 leading-relaxed">
-            Confirmation goes to <span className="text-[#FF5C1A]">{form.email}</span> within 10 minutes.
+            Confirmation goes to <span className="text-[#00f5ff]">{form.email}</span> within 10 minutes.
           </p>
         </motion.div>
       </div>
@@ -66,11 +66,11 @@ export default function Booking() {
   )
 
   return (
-    <section id="booking" className="py-28 dark:bg-[#0A0807] bg-white">
+    <section id="booking" className="py-28 dark:bg-[#050508] bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}>
           <div className="flex items-center gap-3 mb-5">
-            <span className="w-5 h-px bg-[#FF5C1A]"/>
+            <span className="w-5 h-px bg-[#00f5ff]"/>
             <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">Book a Call</span>
           </div>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
@@ -78,7 +78,7 @@ export default function Booking() {
               style={{fontSize:'clamp(2.4rem,5.5vw,5rem)'}}>
               Let's talk about<br/><span className="grad-cyan">your product.</span>
             </h2>
-            <p className="font-grotesk text-sm dark:text-white/65 text-black/50 max-w-xs leading-relaxed">
+            <p className="font-grotesk text-sm dark:text-white/42 text-black/50 max-w-xs leading-relaxed">
               Pick a slot, tell us about your project, pay a refundable deposit — and we'll be ready for the call.
             </p>
           </div>
@@ -96,9 +96,9 @@ export default function Booking() {
                   return (
                     <button key={ct.id} onClick={() => setCallType(ct.id)}
                       className={`rounded-xl p-3.5 text-left border transition-all duration-200 ${callType===ct.id
-                        ? 'border-[#FF5C1A]/50 dark:bg-[#FF5C1A]/[0.05] bg-[#FF5C1A]/[0.04]'
+                        ? 'border-[#00f5ff]/50 dark:bg-[#00f5ff]/[0.05] bg-[#00f5ff]/[0.04]'
                         : 'dark:border-white/5 border-black/6 dark:hover:border-white/10 hover:border-black/10'}`}>
-                      <Icon size={15} className={`mb-1.5 ${callType===ct.id ? 'text-[#FF5C1A]' : 'dark:text-white/45 text-black/45'}`}/>
+                      <Icon size={15} className={`mb-1.5 ${callType===ct.id ? 'text-[#00f5ff]' : 'dark:text-white/45 text-black/45'}`}/>
                       <p className="font-grotesk font-600 text-sm dark:text-white text-black">{ct.label}</p>
                       <p className="font-grotesk text-xs dark:text-white/35 text-black/42">{ct.desc}</p>
                     </button>
@@ -116,10 +116,10 @@ export default function Booking() {
                     className={`rounded-xl p-3 text-left border transition-all duration-200 ${!s.ok
                       ? 'opacity-25 cursor-not-allowed dark:border-white/5 border-black/5'
                       : slot===s.id
-                        ? 'border-[#FF5C1A]/50 dark:bg-[#FF5C1A]/[0.05]'
+                        ? 'border-[#00f5ff]/50 dark:bg-[#00f5ff]/[0.05]'
                         : 'dark:border-white/5 border-black/6 dark:hover:border-white/12 hover:border-black/10'}`}>
                     <p className="font-grotesk text-[10px] tracking-[0.15em] dark:text-white/35 text-black/40 mb-0.5 uppercase">{s.day} · {s.date}</p>
-                    <p className={`font-grotesk font-600 text-sm ${slot===s.id ? 'text-[#FF5C1A]' : 'dark:text-white text-black'}`}>{s.time}</p>
+                    <p className={`font-grotesk font-600 text-sm ${slot===s.id ? 'text-[#00f5ff]' : 'dark:text-white text-black'}`}>{s.time}</p>
                   </button>
                 ))}
               </div>
@@ -136,7 +136,7 @@ export default function Booking() {
                   <label className="block font-grotesk text-xs dark:text-white/35 text-black/42 mb-1.5">{f.l}</label>
                   <input type={f.t} value={form[f.k]} onChange={e => setForm(p => ({...p,[f.k]:e.target.value}))}
                     placeholder={f.l}
-                    className="w-full rounded-xl px-3.5 py-2.5 text-sm font-grotesk dark:bg-white/[0.04] bg-black/[0.04] border dark:border-white/5 border-black/8 dark:text-white text-black dark:placeholder-white/18 placeholder-black/25 focus:outline-none focus:border-[#FF5C1A]/45 transition-colors"/>
+                    className="w-full rounded-xl px-3.5 py-2.5 text-sm font-grotesk dark:bg-white/[0.04] bg-black/[0.04] border dark:border-white/5 border-black/8 dark:text-white text-black dark:placeholder-white/18 placeholder-black/25 focus:outline-none focus:border-[#00f5ff]/45 transition-colors"/>
                 </div>
               ))}
 
@@ -144,15 +144,15 @@ export default function Booking() {
                 <label className="block font-grotesk text-xs dark:text-white/35 text-black/42 mb-1.5">What are you building?</label>
                 <textarea rows={3} value={form.note} onChange={e => setForm(p => ({...p,note:e.target.value}))}
                   placeholder="Brief description of your project…"
-                  className="w-full rounded-xl px-3.5 py-2.5 text-sm font-grotesk dark:bg-white/[0.04] bg-black/[0.04] border dark:border-white/5 border-black/8 dark:text-white text-black dark:placeholder-white/18 placeholder-black/25 focus:outline-none focus:border-[#FF5C1A]/45 transition-colors resize-none"/>
+                  className="w-full rounded-xl px-3.5 py-2.5 text-sm font-grotesk dark:bg-white/[0.04] bg-black/[0.04] border dark:border-white/5 border-black/8 dark:text-white text-black dark:placeholder-white/18 placeholder-black/25 focus:outline-none focus:border-[#00f5ff]/45 transition-colors resize-none"/>
               </div>
 
               <motion.button
                 onClick={book}
                 disabled={!slot||!form.name||!form.email||loading}
-                whileHover={{scale:1.02,boxShadow:'0 0 36px rgba(255,92,26,0.22)'}}
+                whileHover={{scale:1.02,boxShadow:'0 0 36px rgba(0,245,255,0.22)'}}
                 whileTap={{scale:0.97}}
-                className="mt-auto w-full py-3.5 rounded-xl bg-[#FF5C1A] text-black font-grotesk font-600 text-sm flex items-center justify-center gap-2 disabled:opacity-35 disabled:cursor-not-allowed transition-all duration-200">
+                className="mt-auto w-full py-3.5 rounded-xl bg-[#00f5ff] text-black font-grotesk font-600 text-sm flex items-center justify-center gap-2 disabled:opacity-35 disabled:cursor-not-allowed transition-all duration-200">
                 {loading ? 'Processing…' : <><span>Confirm & Pay ₹999 Deposit</span><ArrowRight size={15}/></>}
               </motion.button>
 

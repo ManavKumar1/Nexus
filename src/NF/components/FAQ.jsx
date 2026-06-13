@@ -21,7 +21,7 @@ function FAQItem({ faq, i }) {
       className="border-b dark:border-white/5 border-black/5 last:border-0">
       <button onClick={() => setOpen(o => !o)}
         className="w-full flex items-center justify-between py-6 text-left gap-4 group">
-        <span className="font-syne font-600 dark:text-white text-black group-hover:dark:text-[#FF5C1A] group-hover:text-[#E8460A] transition-colors duration-200"
+        <span className="font-syne font-600 dark:text-white text-black group-hover:dark:text-[#00f5ff] group-hover:text-[#0070c0] transition-colors duration-200"
           style={{fontSize:'clamp(0.95rem,1.5vw,1.1rem)'}}>
           {faq.q}
         </span>
@@ -46,19 +46,19 @@ function FAQItem({ faq, i }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-28 dark:bg-[#0C0A08] bg-stone-50/60">
+    <section id="faq" className="py-28 dark:bg-[#07070c] bg-gray-50/60">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}>
               <div className="flex items-center gap-3 mb-5">
-                <span className="w-5 h-px bg-[#FFB020]"/>
+                <span className="w-5 h-px bg-[#bf5fff]"/>
                 <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">FAQ</span>
               </div>
               <h2 className="font-syne font-800 dark:text-white text-black leading-[0.93] tracking-[-0.02em] mb-5"
                 style={{fontSize:'clamp(2.2rem,4.5vw,4rem)'}}>
                 Still have<br/>
-                <span style={{background:'linear-gradient(135deg,#FFB020,#FF5C1A)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>
+                <span style={{background:'linear-gradient(135deg,#bf5fff,#00f5ff)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>
                   questions?
                 </span>
               </h2>
@@ -66,7 +66,7 @@ export default function FAQ() {
                 If you can't find what you're looking for, schedule a call. No commitment, no pitch.
               </p>
               <motion.a href="#booking" whileHover={{scale:1.03}} whileTap={{scale:0.97}}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FF5C1A] text-black font-grotesk font-600 text-sm">
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00f5ff] text-black font-grotesk font-600 text-sm">
                 Schedule a Call →
               </motion.a>
               {/* Verteal tip */}

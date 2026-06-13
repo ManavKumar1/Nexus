@@ -23,7 +23,7 @@ function AppContent() {
       <main>
         <Hero />
         <TechMarquee />
-        <VideoSection />
+        {/* <VideoSection /> */}
         <ValueProps />
         <BrandSystem />
         <DedicatedTeam />
@@ -31,7 +31,7 @@ function AppContent() {
         <Manifesto />
         <Testimonials />
         <Process />
-        <Pricing />
+        {/* <Pricing /> */}
         <FAQ />
         <Booking />
       </main>

@@ -5,17 +5,17 @@ import { services } from '../data/content'
 const iconMap = { globe: Globe, smartphone: Smartphone, layers: Layers, cpu: Cpu, sparkles: Sparkles, terminal: Terminal }
 
 const colorMap = {
-  cyan:   { border: 'rgba(255,92,26,0.2)',   bg: 'rgba(255,92,26,0.06)',   text: '#FF5C1A',   tag: 'rgba(255,92,26,0.1)' },
-  violet: { border: 'rgba(255,176,32,0.2)',  bg: 'rgba(255,176,32,0.06)',  text: '#FFB020',   tag: 'rgba(255,176,32,0.1)' },
-  lime:   { border: 'rgba(255,77,106,0.2)',  bg: 'rgba(255,77,106,0.06)',  text: '#FF4D6A',   tag: 'rgba(255,77,106,0.1)' },
-  pink:   { border: 'rgba(255,210,63,0.2)',  bg: 'rgba(255,210,63,0.06)',  text: '#FFD23F',   tag: 'rgba(255,210,63,0.1)' },
+  cyan:   { border: 'rgba(0,245,255,0.2)',   bg: 'rgba(0,245,255,0.06)',   text: '#00f5ff',   tag: 'rgba(0,245,255,0.1)' },
+  violet: { border: 'rgba(191,95,255,0.2)',  bg: 'rgba(191,95,255,0.06)',  text: '#bf5fff',   tag: 'rgba(191,95,255,0.1)' },
+  lime:   { border: 'rgba(198,241,53,0.2)',  bg: 'rgba(198,241,53,0.06)',  text: '#c6f135',   tag: 'rgba(198,241,53,0.1)' },
+  pink:   { border: 'rgba(255,45,120,0.2)',  bg: 'rgba(255,45,120,0.06)',  text: '#ff2d78',   tag: 'rgba(255,45,120,0.1)' },
 }
 
 const lightColorMap = {
-  cyan:   { border: 'rgba(232,70,10,0.2)',   bg: 'rgba(232,70,10,0.04)',   text: '#E8460A',   tag: 'rgba(232,70,10,0.08)' },
-  violet: { border: 'rgba(184,101,10,0.2)',  bg: 'rgba(184,101,10,0.04)',  text: '#B8650A',   tag: 'rgba(184,101,10,0.08)' },
-  lime:   { border: 'rgba(194,41,74,0.2)',   bg: 'rgba(194,41,74,0.04)',  text: '#C2294A',   tag: 'rgba(194,41,74,0.08)' },
-  pink:   { border: 'rgba(146,102,10,0.2)',  bg: 'rgba(146,102,10,0.04)',  text: '#92660A',   tag: 'rgba(146,102,10,0.08)' },
+  cyan:   { border: 'rgba(0,180,255,0.2)',   bg: 'rgba(0,180,255,0.04)',   text: '#0070e0',   tag: 'rgba(0,140,255,0.08)' },
+  violet: { border: 'rgba(139,92,246,0.2)',  bg: 'rgba(139,92,246,0.04)',  text: '#6d28d9',   tag: 'rgba(139,92,246,0.08)' },
+  lime:   { border: 'rgba(77,124,15,0.2)',   bg: 'rgba(101,163,13,0.04)',  text: '#3f6212',   tag: 'rgba(77,124,15,0.08)' },
+  pink:   { border: 'rgba(219,39,119,0.2)',  bg: 'rgba(219,39,119,0.04)',  text: '#9d174d',   tag: 'rgba(219,39,119,0.08)' },
 }
 
 function ServiceCard({ svc, index, dark }) {
@@ -88,7 +88,7 @@ function ServiceCard({ svc, index, dark }) {
 
 export default function Services({ dark }) {
   return (
-    <section id="services" className="py-32 dark:bg-[#0A0807] bg-white">
+    <section id="services" className="py-32 dark:bg-[#050508] bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-16">
@@ -99,7 +99,7 @@ export default function Services({ dark }) {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-6"
           >
-            <span className="w-6 h-px bg-[#FF5C1A]" />
+            <span className="w-6 h-px bg-[#00f5ff]" />
             <span className="text-xs font-grotesk font-600 tracking-[0.2em] uppercase dark:text-white/40 text-black/50">
               What We Build
             </span>
@@ -113,7 +113,7 @@ export default function Services({ dark }) {
           >
             Every digital surface,
             <br />
-            <span className="grad-cyan">mastered.</span>
+            <span className="gradient-text-cyan">mastered.</span>
           </motion.h2>
         </div>
 

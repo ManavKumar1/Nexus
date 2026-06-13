@@ -14,7 +14,7 @@ const props = [
     tag: 'For Founders',
     title: 'Secure investor conviction.',
     body: 'Walk into every pitch with a product that speaks before you do. Polished UI, airtight architecture, and a demo that shifts rooms — built by a team that understands what investors actually scrutinise.',
-    accent: '#FF5C1A',
+    accent: '#00f5ff',
     visual: 'pitch',
   },
   {
@@ -22,7 +22,7 @@ const props = [
     tag: 'For Growth Teams',
     title: 'Turn users into ambassadors.',
     body: 'Distinctive products create word-of-mouth no ad budget can replicate. We build the flows and micro-interactions that make users reach for their phones to show friends unprompted.',
-    accent: '#FFB020',
+    accent: '#bf5fff',
     visual: 'growth',
   },
   {
@@ -30,7 +30,7 @@ const props = [
     tag: 'For Hiring Teams',
     title: 'Attract the elite talent.',
     body: 'The best engineers and designers have options. A product that looks and feels exceptional signals a future worth betting careers on — the thing people brag about working on.',
-    accent: '#FF4D6A',
+    accent: '#c6f135',
     visual: 'talent',
   },
 ]
@@ -49,7 +49,7 @@ function PitchVisual({ accent }) {
               width: 18, height: `${h}%`,
               background: i === 5
                 ? accent
-                : `rgba(${accent === '#FF5C1A' ? '255,92,26' : '255,92,26'},${0.12 + i * 0.04})`,
+                : `rgba(${accent === '#00f5ff' ? '0,245,255' : '0,245,255'},${0.12 + i * 0.04})`,
               borderRadius: 4,
               transformOrigin: 'bottom',
             }}
@@ -145,12 +145,12 @@ export default function ValueProps() {
   const Visual = VISUALS[activeProp.visual]
 
   return (
-    <section ref={ref} id="why" className="dark:bg-[#0A0807] bg-white">
+    <section ref={ref} id="why" className="dark:bg-[#050508] bg-white">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 py-24 border-b dark:border-white/5 border-black/5">
         <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}>
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-5 h-px bg-[#FF5C1A]"/>
+            <span className="w-5 h-px bg-[#00f5ff]"/>
             <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">Why it matters</span>
           </div>
           <h2 className="font-syne font-800 dark:text-white text-black leading-[0.94] tracking-[-0.02em]"
@@ -245,7 +245,7 @@ export default function ValueProps() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.96, y: -10 }}
                 transition={{ duration: 0.4, ease: [0.16,1,0.3,1] }}
-                className="relative rounded-2xl overflow-hidden dark:bg-[#100C0A] bg-stone-50"
+                className="relative rounded-2xl overflow-hidden dark:bg-[#0a0a14] bg-gray-50"
                 style={{
                   aspectRatio: '1 / 1',
                   border: `1px solid ${activeProp.accent}22`,

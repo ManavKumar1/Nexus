@@ -49,7 +49,7 @@ export default function Manifesto() {
   const paragraphs = MANIFESTO.split('\n\n')
 
   return (
-    <section ref={ref} className="relative dark:bg-[#0C0A08] bg-stone-50/70 overflow-hidden py-32">
+    <section ref={ref} className="relative dark:bg-[#07070c] bg-gray-50/70 overflow-hidden py-32">
 
       {/* Big background text */}
       <motion.div style={{y}}
@@ -64,7 +64,7 @@ export default function Manifesto() {
         {/* Label */}
         <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.6}}
           className="flex items-center gap-3 mb-16">
-          <span className="w-5 h-px bg-[#FFD23F]"/>
+          <span className="w-5 h-px bg-[#ff2d78]"/>
           <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">
             Our Manifesto
           </span>
@@ -93,7 +93,7 @@ export default function Manifesto() {
         {/* Signature */}
         <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7,delay:0.4}}
           className="mt-16 flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FF5C1A] to-[#FFB020] flex items-center justify-center font-syne font-800 text-black text-sm">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00f5ff] to-[#bf5fff] flex items-center justify-center font-syne font-800 text-black text-sm">
             N
           </div>
           <div>

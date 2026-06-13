@@ -2,11 +2,11 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 
 const testimonials = [
-  { initials:'AM', name:'Arjun Mehta', role:'CEO, Finvest', color:'#FF5C1A',
+  { initials:'AM', name:'Arjun Mehta', role:'CEO, Finvest', color:'#00f5ff',
     text:'Nexus delivered a full SaaS dashboard in 6 weeks. The quality was genuinely shocking — better than our previous agency who charged 3x more.' },
-  { initials:'PN', name:'Priya Nair', role:'Founder, Loopstack', color:'#FFB020',
+  { initials:'PN', name:'Priya Nair', role:'Founder, Loopstack', color:'#bf5fff',
     text:'They didn\'t just build what we asked for — they challenged our assumptions and shipped something 10x better. True partners, not vendors.' },
-  { initials:'RO', name:'Rajan Oberoi', role:'CTO, Tradeflow', color:'#FF4D6A',
+  { initials:'RO', name:'Rajan Oberoi', role:'CTO, Tradeflow', color:'#c6f135',
     text:'The AI integration was exceptional. They shipped a RAG system in 2 weeks that our in-house team estimated at 3 months.' },
 ]
 
@@ -17,7 +17,7 @@ export default function Testimonials() {
   const y    = useSpring(rawY,{stiffness:45,damping:18})
 
   return (
-    <section ref={ref} className="relative py-28 dark:bg-[#0C0A08] bg-stone-50/60 overflow-hidden">
+    <section ref={ref} className="relative py-28 dark:bg-[#07070c] bg-gray-50/60 overflow-hidden">
       <motion.div style={{y}} className="absolute left-[-3%] top-1/2 -translate-y-1/2 pointer-events-none select-none z-0">
         <span className="font-syne font-800 dark:text-white/[0.018] text-black/[0.025]"
           style={{fontSize:'clamp(100px,18vw,220px)',lineHeight:1,display:'block'}}>LOVE</span>
@@ -26,13 +26,13 @@ export default function Testimonials() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}>
           <div className="flex items-center gap-3 mb-5">
-            <span className="w-5 h-px bg-[#FFD23F]"/>
+            <span className="w-5 h-px bg-[#ff2d78]"/>
             <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">What Clients Say</span>
           </div>
           <h2 className="font-syne font-800 dark:text-white text-black leading-[0.93] tracking-[-0.02em] mb-14"
             style={{fontSize:'clamp(2.4rem,5.5vw,5rem)'}}>
             Partners, not<br/>
-            <span style={{background:'linear-gradient(135deg,#FFD23F,#FFB020)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>
+            <span style={{background:'linear-gradient(135deg,#ff2d78,#bf5fff)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>
               vendors.
             </span>
           </h2>

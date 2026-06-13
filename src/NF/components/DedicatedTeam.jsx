@@ -39,13 +39,13 @@ export default function DedicatedTeam() {
   const opacity = useTransform(scrollYProgress, [0, 0.12, 0.88, 1], [0, 1, 1, 0])
 
   return (
-    <section ref={ref} className="relative dark:bg-[#0A0807] bg-white overflow-hidden py-28">
+    <section ref={ref} className="relative dark:bg-[#050508] bg-white overflow-hidden py-28">
 
       {/* Section header */}
       <div className="max-w-7xl mx-auto px-6 mb-20">
         <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}>
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-5 h-px bg-[#FF4D6A]"/>
+            <span className="w-5 h-px bg-[#c6f135]"/>
             <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">
               The Team
             </span>
@@ -133,7 +133,7 @@ export default function DedicatedTeam() {
           {v:'8 roles',l:'In one subscription'},
           {v:'Pause',l:'Anytime, no penalty'},
         ].map(s => (
-          <div key={s.l} className="dark:bg-[#0A0807] bg-white px-6 py-8 text-center">
+          <div key={s.l} className="dark:bg-[#050508] bg-white px-6 py-8 text-center">
             <div className="font-syne font-800 text-2xl grad-cyan mb-1">{s.v}</div>
             <div className="font-grotesk text-xs dark:text-white/35 text-black/45">{s.l}</div>
           </div>

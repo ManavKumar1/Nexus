@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 const plans = [
   {
     tag: 'ON-GOING',
-    price: '3,000',
+    price: '€3,000',
     period: '/month',
     highlight: false,
     features: [
@@ -25,7 +25,7 @@ const plans = [
   },
   {
     tag: 'EMBEDDED',
-    price: '5,000',
+    price: '€5,000',
     period: '/month',
     highlight: true,
     features: [
@@ -211,7 +211,7 @@ function PricingCard({ plan, i }) {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-28 dark:bg-[#0A0807] bg-[#f7f7f7]">
+    <section id="pricing" className="py-28 dark:bg-[#050508] bg-[#f7f7f7]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-16 lg:gap-20 items-start">
 
@@ -224,7 +224,7 @@ export default function Pricing() {
             className="lg:sticky lg:top-32"
           >
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-5 h-px bg-[#FF5C1A]"/>
+              <span className="w-5 h-px bg-[#00f5ff]"/>
               <span className="font-grotesk text-[11px] tracking-[0.22em] uppercase dark:text-white/35 text-black/45">Pricing</span>
             </div>
 

@@ -44,14 +44,14 @@ export default function Navbar() {
         transition={{ duration:0.7, ease:[0.16,1,0.3,1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'dark:bg-[#0A0807]/90 bg-white/90 backdrop-blur-xl border-b dark:border-white/5 border-black/5'
+            ? 'dark:bg-[#050508]/90 bg-white/90 backdrop-blur-xl border-b dark:border-white/5 border-black/5'
             : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-[70px] flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FF5C1A] to-[#FFB020] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00f5ff] to-[#bf5fff] flex items-center justify-center">
               <Zap size={16} className="text-black fill-black" />
             </div>
             <span className="font-syne font-800 text-xl tracking-tight dark:text-white text-black">
@@ -70,7 +70,7 @@ export default function Navbar() {
                 {l.label}
                 {/* Subtle dot indicator for transition links */}
                 <span className="absolute -bottom-1 left-0 right-0 flex justify-center">
-                  <span className="w-1 h-1 rounded-full bg-[#FF5C1A] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  <span className="w-1 h-1 rounded-full bg-[#00f5ff] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </span>
               </TransitionLink>
             ) : (
@@ -95,7 +95,7 @@ export default function Navbar() {
             </motion.button>
 
             <TransitionLink href="#booking"
-              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-grotesk font-600 text-black bg-[#FF5C1A] hover:bg-[#FF5C1A]/90 transition-all duration-200">
+              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-grotesk font-600 text-black bg-[#00f5ff] hover:bg-[#00f5ff]/90 transition-all duration-200">
               Book a Call
               <span className="w-4 h-4 rounded-full bg-black/20 flex items-center justify-center">
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
@@ -118,7 +118,7 @@ export default function Navbar() {
           <motion.div
             initial={{ opacity:0, y:-20 }} animate={{ opacity:1, y:0 }} exit={{ opacity:0, y:-20 }}
             transition={{ duration:0.25 }}
-            className="fixed inset-0 z-40 dark:bg-[#0A0807] bg-white flex flex-col pt-[70px]">
+            className="fixed inset-0 z-40 dark:bg-[#050508] bg-white flex flex-col pt-[70px]">
             <div className="flex flex-col gap-2 p-6">
               {allLinks.map((l, i) => l.transition ? (
                 <TransitionLink key={l.label} href={l.href} onClick={() => setMenuOpen(false)}>
@@ -139,7 +139,7 @@ export default function Navbar() {
               ))}
               <TransitionLink href="#booking" onClick={() => setMenuOpen(false)}>
                 <motion.span initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ delay:0.35 }}
-                  className="block mt-6 text-center py-4 rounded-full text-lg font-grotesk font-600 text-black bg-[#FF5C1A]">
+                  className="block mt-6 text-center py-4 rounded-full text-lg font-grotesk font-600 text-black bg-[#00f5ff]">
                   Book a Call
                 </motion.span>
               </TransitionLink>

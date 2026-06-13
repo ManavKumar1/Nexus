@@ -26,13 +26,13 @@ export default function VideoSection() {
   return (
     <section
       ref={ref}
-      className="relative py-8 dark:bg-[#0A0807] bg-white overflow-hidden"
+      className="relative py-8 dark:bg-[#050508] bg-white overflow-hidden"
     >
       <motion.div style={{ opacity }} className="max-w-7xl mx-auto px-6">
         {/* Label row */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <span className="w-5 h-px bg-[#FF5C1A]" />
+            <span className="w-5 h-px bg-[#00f5ff]" />
             <span className="font-grotesk text-[11px] tracking-[0.2em] uppercase dark:text-white/35 text-black/45">
               What we ship
             </span>
@@ -54,7 +54,7 @@ export default function VideoSection() {
     className="absolute inset-0 dark:hidden"
     style={{
       background:
-        'radial-gradient(circle at center, rgba(255,92,26,.06), transparent 60%)',
+        'radial-gradient(circle at center, rgba(6,182,212,.06), transparent 60%)',
     }}
   />
 
@@ -82,10 +82,10 @@ export default function VideoSection() {
         top: `${(i * 53) % 100}%`,
         background:
           i % 3 === 0
-            ? 'rgb(255 92 26)'
+            ? 'rgb(6 182 212)'
             : i % 3 === 1
-            ? 'rgb(255 176 32)'
-            : 'rgb(255 77 106)',
+            ? 'rgb(168 85 247)'
+            : 'rgb(132 204 22)',
         opacity: 0.15,
       }}
       animate={{
@@ -129,7 +129,7 @@ export default function VideoSection() {
       "
       style={{
         background:
-          'conic-gradient(from 0deg,#FF5C1A,#FFB020,#FF4D6A,#FF5C1A)',
+          'conic-gradient(from 0deg,#00f5ff,#bf5fff,#c6f135,#00f5ff)',
         filter: 'blur(140px)',
       }}
     />
@@ -348,7 +348,7 @@ export default function VideoSection() {
 </div>
 
           {/* Overlay tint */}
-          <div className="absolute inset-0 dark:bg-[#0A0807]/10 pointer-events-none" />
+          <div className="absolute inset-0 dark:bg-[#050508]/10 pointer-events-none" />
 
         </div>
       </motion.div>

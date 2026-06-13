@@ -87,7 +87,7 @@ export default function Footer() {
     <footer ref={ref} className="relative overflow-hidden">
 
       {/* ── Pre-footer CTA strip ── */}
-      <div className="dark:bg-[#0C0A08] bg-stone-50/80 border-t dark:border-white/5 border-black/6">
+      <div className="dark:bg-[#07070c] bg-gray-50/80 border-t dark:border-white/5 border-black/6">
         <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row lg:items-center justify-between gap-10">
           <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}>
             <p className="font-grotesk text-sm dark:text-white/42 text-black/50 mb-3">
@@ -113,14 +113,14 @@ export default function Footer() {
       </div>
 
       {/* ── Links grid ── */}
-      <div className="dark:bg-[#0C0A08] bg-stone-50/80 border-t dark:border-white/5 border-black/6">
+      <div className="dark:bg-[#07070c] bg-gray-50/80 border-t dark:border-white/5 border-black/6">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-12">
 
             {/* Brand col */}
             <div className="col-span-2 md:col-span-2">
               <a href="#" className="flex items-center gap-2 mb-5">
-                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#FF5C1A] to-[#FFB020] flex items-center justify-center">
+                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#00f5ff] to-[#bf5fff] flex items-center justify-center">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="black"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                 </div>
                 <span className="font-syne font-800 text-lg dark:text-white text-black tracking-tight">
@@ -141,8 +141,8 @@ export default function Footer() {
               {/* Availability badge */}
               <div className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5C1A] opacity-60"/>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF5C1A]"/>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f5ff] opacity-60"/>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00f5ff]"/>
                 </span>
                 <span className="font-grotesk text-xs dark:text-white/35 text-black/45">
                   Accepting 2 new partners

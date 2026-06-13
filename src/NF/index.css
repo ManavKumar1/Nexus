@@ -11,35 +11,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ============================================================
-   POP PALETTE — warm orange-led accent system
-   Replaces the previous cyan/violet/lime/pink "neon" scheme.
-   Reads consistently in both light and dark mode, and shares
-   a hue family with the brand red-orange used in the
-   Footer (#FF2400) and Pricing "Embedded" card (#e63000).
-
-   --neon-* names are kept (and re-pointed) for backward
-   compatibility with the scrollbar / underline-reveal rules
-   below. New code should prefer the --pop-* names.
-   ============================================================ */
 :root {
-  /* dark-mode bright pops */
-  --pop-orange: #FF5C1A;   /* primary — CTAs, status dots, links   */
-  --pop-amber:  #FFB020;   /* secondary — gradient pairing         */
-  --pop-coral:  #FF4D6A;   /* tertiary — alt accents               */
-  --pop-gold:   #FFD23F;   /* quaternary — alt accents             */
-
-  /* light-mode, contrast-safe deep variants */
-  --pop-orange-deep: #E8460A;
-  --pop-amber-deep:  #B8650A;
-  --pop-coral-deep:  #C2294A;
-  --pop-gold-deep:   #92660A;
-
-  /* legacy aliases — now resolve to the pop palette */
-  --neon-cyan: var(--pop-orange);
-  --neon-violet: var(--pop-amber);
-  --neon-lime: var(--pop-coral);
-  --neon-pink: var(--pop-gold);
+  --neon-cyan: #00f5ff;
+  --neon-violet: #bf5fff;
+  --neon-lime: #c6f135;
+  --neon-pink: #ff2d78;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -72,21 +48,21 @@ body {
 /* ── Grid bg ── */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(255,92,26,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,92,26,0.035) 1px, transparent 1px);
+    linear-gradient(rgba(0,245,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,245,255,0.035) 1px, transparent 1px);
   background-size: 72px 72px;
 }
 .grid-bg-light {
   background-image:
-    linear-gradient(rgba(255,92,26,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,92,26,0.05) 1px, transparent 1px);
+    linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
   background-size: 72px 72px;
 }
 
 /* ── Gradient text ── */
-.grad-cyan { background: linear-gradient(135deg,#FF5C1A,#FFB020); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.grad-lime { background: linear-gradient(135deg,#FF4D6A,#FF5C1A); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.grad-violet { background: linear-gradient(135deg,#FFB020,#FFD23F); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-cyan { background: linear-gradient(135deg,#00f5ff,#bf5fff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-lime { background: linear-gradient(135deg,#c6f135,#00f5ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-violet { background: linear-gradient(135deg,#bf5fff,#ff2d78); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 
 /* ── Marquee ── */
 .marquee-wrap { overflow: hidden; }
@@ -96,7 +72,7 @@ body {
 
 /* ── Video shimmer overlay ── */
 .video-shimmer {
-  background: linear-gradient(135deg, rgba(255,92,26,0.08) 0%, rgba(255,176,32,0.06) 50%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(135deg, rgba(0,245,255,0.08) 0%, rgba(191,95,255,0.06) 50%, rgba(0,0,0,0) 100%);
 }
 
 /* ── Kerna-style section number ── */
@@ -105,7 +81,7 @@ body {
   font-weight: 800;
   font-size: clamp(80px, 14vw, 180px);
   line-height: 1;
-  background: linear-gradient(180deg, rgba(255,92,26,0.12) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(0,245,255,0.12) 0%, transparent 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -113,7 +89,7 @@ body {
   pointer-events: none;
 }
 .dark .section-number {
-  background: linear-gradient(180deg, rgba(255,92,26,0.1) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(0,245,255,0.1) 0%, transparent 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -153,8 +129,8 @@ body {
 }
 
 /* ── Border glow ── */
-.border-glow-cyan { box-shadow: 0 0 0 1px rgba(255,92,26,0.2), 0 0 30px rgba(255,92,26,0.08); }
-.border-glow-violet { box-shadow: 0 0 0 1px rgba(255,176,32,0.2), 0 0 30px rgba(255,176,32,0.08); }
+.border-glow-cyan { box-shadow: 0 0 0 1px rgba(0,245,255,0.2), 0 0 30px rgba(0,245,255,0.08); }
+.border-glow-violet { box-shadow: 0 0 0 1px rgba(191,95,255,0.2), 0 0 30px rgba(191,95,255,0.08); }
 
 /* ── Kerna value card line ── */
 .value-line::before {
@@ -162,5 +138,5 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,92,26,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0,245,255,0.3), transparent);
 }
